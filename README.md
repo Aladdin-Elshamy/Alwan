@@ -1,8 +1,8 @@
-# Alwan Website
+# Alwan Website⭐
 ![Screenshot 2024-02-11 192123](https://github.com/Aladdin-Elshamy/Alwan/assets/122921299/17207614-9164-453b-86fc-7bd4c86da03a)
 Welcome to the Alwan website! This website showcases the beautiful and vibrant world of Alwan, a project created by Aladdin Elshamy.
 
-## Table of Contents
+## Table of Contents📖
 - [About](#about)
 - [Features](#features)
 - [Technology Used](#technology-used)
@@ -10,7 +10,7 @@ Welcome to the Alwan website! This website showcases the beautiful and vibrant w
 - [Usage](#usage)
 
 ## About
-Alwan is a project that aims to celebrate the diversity and richness of colors found in our world. Through captivating visuals and immersive experiences, Aladdin Elshamy invites you to explore the wonders of colors and their impact on our lives.
+Alwan is a project that aims to make you visualize the diversity and richness of any color found in our world.
 
 ## Features
 - Color Exploration: Dive into a wide range of colors, discover their variations, and learn about their cultural and emotional significance.
