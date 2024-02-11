@@ -1,68 +1,106 @@
-// Declaring variables
-let selectValue = document.getElementById("scheme-mode");
-const colorButton = document.querySelector("button");
-const color = document.querySelector("input");
-let colorValue = color.value.replace("#","")
-let targetValue = ''
-if(localStorage.getItem("color")&&localStorage.getItem("mode")){
-    selectValue.value = localStorage.getItem("mode");
-    colorValue = localStorage.getItem("color")
-    color.value = `#${colorValue}`
+html, body {
+    margin: 0;
+    padding: 0;
 }
-fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue}&mode=${selectValue.value}`)
-        
-        .then(response => response.json())
-        .then(data => {
-            document.querySelectorAll(".value").forEach((element,i) => {
-            element.textContent = data.colors[i].hex.value
-            })
-            document.querySelectorAll(".color").forEach((element,i) => {
-                element.style.backgroundColor = data.colors[i].hex.value
-            })
-    })
-colorButton.addEventListener("click",function(){
-    colorValue = color.value.replace("#","")
-    localStorage.setItem("color",colorValue)
-    localStorage.setItem("mode",selectValue.value)
-    fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue}&mode=${selectValue.value}`)
-        .then(response => response.json())
-        .then(data => {
-            document.querySelectorAll(".value").forEach((element,i) => {
-            element.textContent = data.colors[i].hex.value
-            })
-            document.querySelectorAll(".color").forEach((element,i) => {
-                element.style.backgroundColor = data.colors[i].hex.value
-            })
-    })
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.color,.value,.colors,.colors-hex,button {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+body{
+    height: 100vh;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: rgb(235,197,214);
+    background: linear-gradient(90deg, rgba(235,197,214,1) 0%, rgba(148,187,233,1) 100%);
+}
 
-})
+.container{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 600px;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 6px 6px 1px #9CA3AF;
 
-document.querySelectorAll(".color").forEach((element,i) => {
-    element.addEventListener("click",function(){
-        if(document.querySelectorAll(".value")[i].textContent !== "Copied!"){ 
-            targetValue = document.querySelectorAll(".value")[i].textContent
-            navigator.clipboard.writeText(targetValue);
-        }
-        
-        setTimeout(function(){
-            document.querySelectorAll(".value")[i].textContent = "Copied!"
-        },100)
-        setTimeout(function(){
-            document.querySelectorAll(".value")[i].textContent = targetValue
-        },1000)
-    })
-})
-document.querySelectorAll(".value").forEach((element,i) => {
-    element.addEventListener("click",function(){
-        if(document.querySelectorAll(".value")[i].textContent !== "Copied!"){ 
-            targetValue = document.querySelectorAll(".value")[i].textContent
-            navigator.clipboard.writeText(targetValue);
-        }
-        setTimeout(function(){
-            document.querySelectorAll(".value")[i].textContent = "Copied!"
-        },300)
-        setTimeout(function(){
-            document.querySelectorAll(".value")[i].textContent = targetValue
-        },1000)
-    })
-})
+    
+}
+/*First section*/
+.select-color{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+input{
+    border: none;
+    padding-inline: 0.1em;
+    background-color: #D1D5DB;
+    block-size: 40px;
+    flex-basis: 60px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+select{
+    padding: 0.5em 0.5em;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    appearance: none;
+    background-image: url("Icon/Icon.png");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem top 50%;
+    background-size: 0.65rem auto;
+    height: 40px;
+    padding-inline: 1em;
+    font-size: clamp(0.875rem, 5vw - 1.5rem, 1rem);
+    flex-grow: 3;
+
+    flex-basis: 200px;
+}
+button{
+    background-color: transparent;
+    border: 1px solid #9CA3AF;
+    border-radius: 4px;
+    height: 40px;
+    font-weight: 500;
+    font-size: clamp(0.625rem, 4vw - 1.25rem, 0.75rem);
+    flex-basis: 100px;
+    flex-grow: 1;
+    padding-inline: 0.4em;
+    cursor: pointer;
+
+}
+button:active{
+    transform: scale(0.95);
+}
+/* Second section */
+.colors,.colors-hex{
+    display:flex;
+    text-align: center;
+    cursor: pointer;
+}
+.colors-hex{
+    text-align: center;
+    padding-block: 1em;
+}
+
+.colors span,.colors-hex span{
+    
+    width: calc(100% / 5);
+}
+.colors-hex span{
+    font-weight: 500;
+    font-size: clamp(0.625rem, 4vw - 1.25rem, 0.75rem);
+}
+.colors span{
+    height: min(300px,50vh);
+}
+
