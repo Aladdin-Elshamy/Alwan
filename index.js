@@ -3,6 +3,7 @@ let selectValue = document.getElementById("scheme-mode");
 const colorButton = document.querySelector("button");
 const color = document.querySelector("input");
 let colorValue = color.value.replace("#","")
+let targetValue = ''
 if(localStorage.getItem("color")&&localStorage.getItem("mode")){
     selectValue.value = localStorage.getItem("mode");
     colorValue = localStorage.getItem("color")
@@ -38,8 +39,10 @@ colorButton.addEventListener("click",function(){
 
 document.querySelectorAll(".color").forEach((element,i) => {
     element.addEventListener("click",function(){
-        const targetValue = document.querySelectorAll(".value")[i].textContent
-        navigator.clipboard.writeText(targetValue);
+        if(document.querySelectorAll(".value")[i].textContent !== "Copied!"){ 
+            targetValue = document.querySelectorAll(".value")[i].textContent
+            navigator.clipboard.writeText(targetValue);
+        }
         
         setTimeout(function(){
             document.querySelectorAll(".value")[i].textContent = "Copied!"
@@ -51,14 +54,15 @@ document.querySelectorAll(".color").forEach((element,i) => {
 })
 document.querySelectorAll(".value").forEach((element,i) => {
     element.addEventListener("click",function(){
-        const targetValue = document.querySelectorAll(".value")[i].textContent
-        navigator.clipboard.writeText(targetValue);
-        
+        if(document.querySelectorAll(".value")[i].textContent !== "Copied!"){ 
+            targetValue = document.querySelectorAll(".value")[i].textContent
+            navigator.clipboard.writeText(targetValue);
+        }
         setTimeout(function(){
             document.querySelectorAll(".value")[i].textContent = "Copied!"
         },300)
         setTimeout(function(){
             document.querySelectorAll(".value")[i].textContent = targetValue
-        },1200)
+        },1000)
     })
 })
