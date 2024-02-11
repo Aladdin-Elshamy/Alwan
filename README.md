@@ -8,8 +8,6 @@ Welcome to the Alwan website! This website showcases the beautiful and vibrant w
 - [Technology Used](#technology-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 Alwan is a project that aims to celebrate the diversity and richness of colors found in our world. Through captivating visuals and immersive experiences, Aladdin Elshamy invites you to explore the wonders of colors and their impact on our lives.
