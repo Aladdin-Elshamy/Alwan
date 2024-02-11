@@ -7,10 +7,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 body{
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     background: rgb(235,197,214);
-background: linear-gradient(90deg, rgba(235,197,214,1) 0%, rgba(148,187,233,1) 100%);
+    background: linear-gradient(90deg, rgba(235,197,214,1) 0%, rgba(148,187,233,1) 100%);
 }
 .container{
     position: absolute;
