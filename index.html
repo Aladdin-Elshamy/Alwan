@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <title>Alwan</title>
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <section class="select-color">
+                    <input type="color" aria-label="select a color">
+                    <select name="scheme-mode" id="scheme-mode">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                    </select>
+                    <button aria-label="get color button">Get color scheme</button>
+                </section>
+                <section class="colors">
+                    <span class="color"></span>
+                    <span class="color"></span>
+                    <span class="color"></span>
+                    <span class="color"></span>
+                    <span class="color"></span>
+                </section>
+                <section class="colors-hex">
+                    <span class="value"></span>
+                    <span class="value"></span>
+                    <span class="value"></span>
+                    <span class="value"></span>
+                    <span class="value"></span>
+                </section>
+            </main>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
