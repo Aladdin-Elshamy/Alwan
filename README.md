@@ -17,7 +17,7 @@ Alwan is a project that aims to celebrate the diversity and richness of colors f
 ## Features
 - Color Exploration: Dive into a wide range of colors, discover their variations, and learn about their cultural and emotional significance.
 - Color Palettes: Explore pre-designed color palettes created by experts, or create your own palettes to inspire your creative projects.
-- Copying Colors: Discover a range of colors to copy and help you choose and work with colors in your own projects. [نسخ الألوان: اكتشف مجموعة من الألوان لنسخها ومساعدتك في اختيار الألوان والعمل معها في مشاريعك الخاصة.] x
+- Copying Colors: Discover a range of colors to copy and help you choose and work with colors in your own projects.
 - Personalization: Customize your experience by selecting your favorite colors, creating your own palettes
   
 ## Technology Used
