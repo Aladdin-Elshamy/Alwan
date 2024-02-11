@@ -32,7 +32,7 @@ The Alwan website leverages the following technologies:
 
   
 ## Installation📝
-To access the Alwan website, simply visit [https://aladdin-elshamy.github.io/Alwan/](https://aladdin-elshamy.github.io/Alwan/) in your web browser. No installation is required, making it easy and accessible for everyone.
+To access the Alwan website, simply visit [https://aladdin-elshamy.github.io/Alwan/](https://aladdin-elshamy.github.io/Alwan/) in your web browser. No installation is required, making it easy and accessible for everyone. Choose the desired color and the mode you want, click on 'get color scheme', that's it!.
 
 
 ## Usage💻
