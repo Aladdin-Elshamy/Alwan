@@ -30,7 +30,7 @@ The Alwan website leverages the following technologies:
 To access the Alwan website, simply visit [https://aladdin-elshamy.github.io/Alwan/](https://aladdin-elshamy.github.io/Alwan/) in your web browser. No installation is required, making it easy and accessible for everyone.
 
 ## Usage
-Once you access the Alwan website, you will be greeted with a visually captivating homepage. From there, you can navigate through different sections to explore the various features of colors and their significance. Engage with interactive elements, discover color palettes, and immerse yourself in a world of colors.
+Once you access the Alwan website, you can navigate through different colors to explore the various modes of these colors. Engage with interactive elements, discover color palettes, and immerse yourself in a world of colors.
 
 ---
 
